@@ -30,7 +30,7 @@ from wishbone import Actor
 
 class Template(Actor):
 
-    '''**A Wishbone module which generates a text from a dictionary and a template.**
+    '''**Generates a text from a dictionary and a template.**
 
     Converts a dictionary to a text using the defined Jinja2 template.
 
