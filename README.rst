@@ -13,7 +13,7 @@
     wishbone.function.template
     ==========================
 
-    Version: 0.1.0
+    Version: 1.0.0
 
     A Wishbone module which generates a text from a dictionary and a template.
     --------------------------------------------------------------------------
@@ -52,5 +52,3 @@
 
             - outbox
                |  Outgoing events
-
-
