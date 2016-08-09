@@ -87,10 +87,10 @@ class Template(Actor):
 
     def construct(self, event):
 
-        for name, template in self.kwargs.header_templates:
+        for name, template in self.kwargs.header_templates.items():
             try:
                 template_r = JinjaTemplate(template)
-                result = template_r.render(**event.get())
+                result = template_r.render(**event.get(self.kwargs.source))
                 event.set(result, "@tmp.%s.%s" % (self.name, name))
             except Exception as err:
                 self.logging.warning(

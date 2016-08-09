@@ -26,7 +26,7 @@
 import pytest
 
 from wishbone.event import Event
-from wishbone.module.template import Template
+from wishbone_function_template import Template
 from wishbone.actor import ActorConfig
 from os import unlink
 from wishbone.utils.test import getter
