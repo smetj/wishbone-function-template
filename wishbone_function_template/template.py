@@ -30,7 +30,7 @@ from wishbone import Actor
 
 class Template(Actor):
 
-    '''**A Wishbone module which generates a text from a dictionary and a template.**
+    '''**Generates a text from a dictionary and a template.**
 
     Converts a dictionary to a text using the defined Jinja2 template.
 
@@ -87,10 +87,10 @@ class Template(Actor):
 
     def construct(self, event):
 
-        for name, template in self.kwargs.header_templates:
+        for name, template in self.kwargs.header_templates.items():
             try:
                 template_r = JinjaTemplate(template)
-                result = template_r.render(**event.get())
+                result = template_r.render(**event.get(self.kwargs.source))
                 event.set(result, "@tmp.%s.%s" % (self.name, name))
             except Exception as err:
                 self.logging.warning(
