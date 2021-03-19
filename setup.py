@@ -31,7 +31,7 @@ VERSION = '1.0.1'
 
 install_requires = [
     'wishbone>=2.1.1',
-    'jinja2==2.8',
+    'jinja2==2.11.3',
 ]
 
 try:
